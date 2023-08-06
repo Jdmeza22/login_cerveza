@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_cerveza/src/presentation/screens/login_screen.dart';
 import 'package:login_cerveza/src/presentation/widgets/buttonWidget.dart';
 
 class WelcomeWidget extends StatelessWidget {
@@ -22,20 +23,34 @@ class WelcomeWidget extends StatelessWidget {
           topRight: Radius.circular(30)
         )
       ),
-      child: const  Column(
+      child:   Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Welcome',style: TextStyle(fontSize: 35 , fontWeight: FontWeight.w800),),
-          SizedBox( height: 10),
-          Text('Esse incididunt officia officia incididunt nulla culpa ullamco labore id sunt in.',
+          const Text('Welcome',style: TextStyle(fontSize: 35 , fontWeight: FontWeight.w800),),
+          const SizedBox( height: 10),
+          const Text('Esse incididunt officia officia incididunt nulla culpa ullamco labore id sunt in.',
             style:TextStyle(fontSize: 20 , fontWeight: FontWeight.w400)),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             children: [
-              ButtonWidget(text :'Sign In', color : Colors.black , textColor: Colors.white ),
-              SizedBox(width: 25,),
-              ButtonWidget(text :'Sign Up', color : Colors.white , textColor : Colors.black )
+              ButtonWidget(
+                text :'Sign In', 
+                color : Colors.black ,
+                textColor: Colors.white,
+                onTap: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Navigator.pushNamed(context, '/login');
+                }),
+              const SizedBox(width: 25,),
+              ButtonWidget(
+                text :'Sign Up',
+                color : Colors.white ,
+                textColor : Colors.black ,
+                onTap: () {
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Navigator.pushNamed(context, '/register');
+                })
             ],
           ) 
         ],
