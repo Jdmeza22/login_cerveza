@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_cerveza/src/presentation/screens/home_screen.dart';
 import 'package:login_cerveza/src/presentation/screens/login_screen.dart';
 import 'package:login_cerveza/src/presentation/screens/register_screen.dart';
 import 'package:login_cerveza/src/presentation/screens/welcome_scree.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/welcome" : (context) => const  WelcomeScreen(),
         "/login" : (context) => const LoginScreen(),
-        "/register" : (context) => const  RegisterScreen()
+        "/register" : (context) => const  RegisterScreen(),
+        "/home" : (context) => const  HomeScreen(),
       });
   }
 }
