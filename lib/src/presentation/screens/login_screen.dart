@@ -8,8 +8,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    TextEditingController email =TextEditingController();
-    TextEditingController password =TextEditingController();
 
     return Scaffold(
       appBar: AppBar( backgroundColor: Colors.amber ,
@@ -35,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Text('Sign In' ,style: TextStyle(fontWeight: FontWeight.w900 , fontSize: 30)),
                 ),
-                const Padding(
+                const Padding( 
                   padding: EdgeInsets.all(8.0),
                   child: Text('Officia aute magna excepteur ullamco commodo aute reprehenderit eiusmod duis commodo elit sint in velit.',
                     style: TextStyle(fontWeight: FontWeight.bold , fontSize: 20)),
