@@ -3,17 +3,18 @@
 import 'package:flutter/material.dart';
 
 class PasswordInput extends StatefulWidget {
+  const PasswordInput({super.key});
+
   @override
-  _PasswordInputState createState() => _PasswordInputState();
+  PasswordInputState createState() => PasswordInputState();
 }
 
-class _PasswordInputState extends State<PasswordInput> {
+class PasswordInputState extends State<PasswordInput> {
   bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TextFormField(
+    return TextFormField(
         obscureText: _obscureText,
         decoration: InputDecoration(
           hintText: 'Password',
@@ -33,7 +34,6 @@ class _PasswordInputState extends State<PasswordInput> {
             },
           ),
         ),
-      ),
-    );
+      );
   }
 }

@@ -6,22 +6,19 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return homeWidget();
+    return const HomeWidget();
   }
 }
 
-class homeWidget extends StatelessWidget {
-  const homeWidget({
+class HomeWidget extends StatelessWidget {
+  const HomeWidget({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return  Center(
         child: Lottie.asset('assets/animations/homeBeer.json')
-      ),
-      
-    );
+      );
   }
 }

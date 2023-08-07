@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_cerveza/src/presentation/widgets/buttonWidget.dart';
+import 'package:login_cerveza/src/presentation/widgets/ButtonWidget.dart';
+import 'package:login_cerveza/src/presentation/widgets/googleButtonWidget.dart';
 import 'package:login_cerveza/src/presentation/widgets/inputPasswordWidget.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -70,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 15),
-                          PasswordInput(),
+                          const PasswordInput(),
                           const SizedBox(height: 5),
                           const InkWell(
                               child : Text('Forgot Password?', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -90,7 +91,27 @@ class LoginScreen extends StatelessWidget {
                           )
                          ],
                         ),
-                      ))
+                      )),
+                      const GoogleButton(),
+                      const SizedBox(height: 30),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        width: double.infinity,
+                        height: 50,
+                        child: ElevatedButton(onPressed: (){},
+                        style:  ButtonStyle(backgroundColor:  MaterialStatePropertyAll(Colors.grey.shade200), 
+                           shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius : BorderRadius.circular(50)))), child: Row(
+                          children: [Image.network('https://www.pngfind.com/pngs/m/594-5948011_icone-facebook-redondo-png-facebook-logo-hd-transparent.png' ,
+                            height: 35, width: 35,),
+                          const Spacer(),
+                          const Text('Continue with Facebook' , style: TextStyle(color: Colors.black),),
+                           const Spacer(),
+                            IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward_outlined ,color: Colors.black,))
+                          ],
+                        ) 
+                        ),
+                      )
+
                     ],
                   ), 
                 )

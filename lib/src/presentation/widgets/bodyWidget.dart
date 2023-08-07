@@ -5,6 +5,8 @@ import 'package:login_cerveza/src/presentation/widgets/welcomeWidget.dart';
 
 
 class BodyWidget extends StatelessWidget {
+  const BodyWidget({super.key});
+
 
   @override
   Widget build(BuildContext context) {
