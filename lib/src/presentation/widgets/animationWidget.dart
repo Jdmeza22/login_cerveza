@@ -21,8 +21,8 @@ class AnimationWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Lottie.asset('assets/animations/cheers.json'),
             ),
-            const Text('deeps' ,style: TextStyle(fontWeight: FontWeight.bold , fontSize: 50 )),
-            const Text('B E E R C A F E E' ,style: TextStyle(fontWeight: FontWeight.w200 , fontSize: 25 ))
+            const Text('brew' ,style: TextStyle(fontWeight: FontWeight.bold , fontSize: 50 )),
+            const Text('H E A V E N' ,style: TextStyle(fontWeight: FontWeight.w200 , fontSize: 25 ))
         ],
       )
 
